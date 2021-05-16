@@ -20,9 +20,9 @@ body {
 /*Dispositivos moviles*/
 @media (min-width: 200px) and (max-width: 480px) { 
     .categorias{
-        padding: 5% 5%;
+        padding: 1rem 1rem;
         margin: 1rem 1rem;
-        font-size: 15px;
+        font-size: 20px;
         
     }
  }
