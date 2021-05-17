@@ -1,0 +1,91 @@
+p {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 20px;
+}
+.container1,
+.container2,
+.container3,
+.container4,
+.container5,
+.container6,
+.container7,
+.container8,
+.container9,
+.container10,
+.container11,
+.container12 {
+  background-color: rgba(255, 37, 37, 0.699);
+  border-width: 3px;
+  border-style: dotted;
+  border-color: black;
+}
+.hijos {
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  background-color: rgb(248, 238, 238);
+}
+.container1 {
+  display: flex;
+  justify-content: space-around;
+
+}
+.container2 {
+  display: flex;
+  justify-content: space-evenly;
+}
+.container3 {
+  display: flex;
+  justify-content: space-between;
+}
+.container4 {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+}
+.container5 {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.container6 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.container7 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.container8 {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.container9 {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+}
+.container10 {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+.container11 {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.container12 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  flex-wrap: wrap;
+}
