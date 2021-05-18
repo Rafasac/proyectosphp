@@ -1,0 +1,51 @@
+body {
+  background-color: coral;
+}
+.grid {
+  background-color: rgb(143, 141, 139);
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  grid-template-rows: 80px auto 80px;
+  column-gap: 10px;
+  row-gap: 100px;
+}
+.hijos {
+    align-self: center;
+  }
+  #grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 50px 1fr;
+  }
+  
+  #areaA {
+    background-color: lime;
+  }
+  
+  #areaB {
+    background-color: yellow;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-rows: 100px 100px 100px 100px;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-gap: 50px;
+  }
+  
+  .grid-item1 {
+    background: blue;
+    text-align: center;
+    border: black 5px solid;
+    grid-column-start: 1; 
+    grid-column-end: 5; 
+    grid-row-start: 1; 
+    grid-row-end: 3;
+  }
+  
+  .grid-item2 {
+    background: grey;
+    text-align: center;
+    border: black 5px solid;
+  }
