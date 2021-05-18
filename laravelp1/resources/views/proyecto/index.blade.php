@@ -1,4 +1,9 @@
-@extends ('layouts.template')
+@extends('layouts.app')
+
+@section('template_title')
+    Proyecto
+@endsection
+
 @section('content')
     <div class="container-fluid">
         <div class="row">

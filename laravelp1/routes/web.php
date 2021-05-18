@@ -13,14 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/acercade', function () {
-    return view('acercade');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+Route::get('/', [App\Http\Controllers\PortafolioController::class, 'index']);
+//Route::get('/acercade', function () {
+//    return view('acercade');
+//});
 
 Auth::routes();
+
+Route::resource('/proyectos', App\Http\Controllers\PortafolioController::class);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
