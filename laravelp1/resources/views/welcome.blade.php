@@ -47,7 +47,7 @@
 											<td>{{ $proyecto->nombre }}</td>
 											<td>{{ $proyecto->imagen }}</td>
 											<td>{{ $proyecto->descripcion }}</td>
-											<td>{{ $proyecto->url }}</td>
+											<td><a href="{{$proyecto->url}}" target="_blank">{{ $proyecto->url }}</a></td>
 
                                             <td>
                                                 <form action="{{ route('proyectos.destroy',$proyecto->id) }}" method="POST">
