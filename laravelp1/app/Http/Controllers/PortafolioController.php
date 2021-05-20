@@ -16,30 +16,18 @@ class PortafolioController extends Controller
         //return view('proyecto.index', compact('proyectos'))
         //->with('i', (request()->input('page', 1) - 1) * $proyectos->perPage());
     }
-    public function edit($id)
-    {
-        $proyecto = Proyecto::find($id);
-
-        return view('proyecto.edit', compact('proyecto'));
-    }
-    public function show($id)
-    {
-        $proyecto = Proyecto::find($id);
-
-        return view('proyecto.show', compact('proyecto'));
-    }
-    public function destroy($id)
-    {
-        $proyecto = Proyecto::find($id)->delete();
-
-        return redirect()->route('proyectos.index')
-            ->with('success', 'Proyecto borrado satisfactoriamente.');
-    }
     public function create()
     {
         $proyecto = new Proyecto();
         return view('proyecto.create', compact('proyecto'));
     }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\Response
+     */
     public function store(Request $request)
     {
         request()->validate(Proyecto::$rules);
@@ -47,6 +35,62 @@ class PortafolioController extends Controller
         $proyecto = Proyecto::create($request->all());
 
         return redirect()->route('proyectos.index')
-            ->with('success', 'Proyecto creado satisfactoriamente.');
+            ->with('success', 'Proyecto created successfully.');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        $proyecto = Proyecto::find($id);
+
+        return view('proyecto.show', compact('proyecto'));
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        $proyecto = Proyecto::find($id);
+
+        return view('proyecto.edit', compact('proyecto'));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request $request
+     * @param  Proyecto $proyecto
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, Proyecto $proyecto)
+    {
+        request()->validate(Proyecto::$rules);
+
+        $proyecto->update($request->all());
+
+        return redirect()->route('proyectos.index')
+            ->with('success', 'Proyecto updated successfully');
+    }
+
+    /**
+     * @param int $id
+     * @return \Illuminate\Http\RedirectResponse
+     * @throws \Exception
+     */
+    public function destroy($id)
+    {
+        $proyecto = Proyecto::find($id)->delete();
+
+        return redirect()->route('proyectos.index')
+            ->with('success', 'Proyecto deleted successfully');
     }
 }

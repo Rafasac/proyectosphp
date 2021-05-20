@@ -45,7 +45,8 @@
                                             <td>{{ ++$i }}</td>
                                             
 											<td>{{ $proyecto->nombre }}</td>
-											<td>{{ $proyecto->imagen }}</td>
+											
+                                            <td><img src="{{$proyecto->imagen }}"></td>
 											<td>{{ $proyecto->descripcion }}</td>
 											<td><a href="{{$proyecto->url}}" target="_blank">{{ $proyecto->url }}</a></td>
 
